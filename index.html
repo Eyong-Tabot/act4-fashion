@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACT 4 | Dress & Accessories Shop - Yaoundé, Cameroon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #8B0000; /* Deep red for ACT 4 */
+            --secondary-color: #1a1a1a; /* Dark black */
+            --accent-color: #D4AF37; /* Gold accent */
+            --text-dark: #333333;
+            --text-light: #f8f8f8;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fefefe;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: var(--secondary-color);
+            display: block;
+            margin-top: -5px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            left: 0;
+            bottom: -5px;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .whatsapp-header {
+            font-size: 24px;
+            color: #25D366;
+            text-decoration: none;
+            background: #f0f9f0;
+            padding: 8px 12px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .whatsapp-header i {
+            font-size: 20px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(139, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero .tagline {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            color: var(--secondary-color);
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            color: white;
+        }
+        
+        .admin-btn {
+            background-color: var(--secondary-color);
+            margin-top: 20px;
+        }
+        
+        /* Sections */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Products Grid */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .product-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            background-color: white;
+            border: 1px solid #eee;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(139, 0, 0, 0.1);
+        }
+        
+        .product-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+        
+        .price {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        /* How to Order Section */
+        .order-instructions {
+            background-color: #f9f7f4;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .order-instructions ol {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        .order-instructions li {
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        /* Admin Panel Styles */
+        .admin-panel {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border: 2px dashed var(--primary-color);
+        }
+        
+        .admin-panel.active {
+            display: block;
+        }
+        
+        .admin-panel h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .product-actions button {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        
+        .delete-btn {
+            background-color: #e74c3c;
+        }
+        
+        .edit-btn {
+            background-color: #3498db;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        /* ACT 4 Branding */
+        .act4-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        .cameroon-flag {
+            display: inline-flex;
+            margin-left: 10px;
+        }
+        
+        .cameroon-flag span {
+            width: 10px;
+            height: 15px;
+            display: inline-block;
+            margin-right: 2px;
+        }
+        
+        .cameroon-flag .green { background-color: #007a5e; }
+        .cameroon-flag .red { background-color: #ce1126; }
+        .cameroon-flag .yellow { background-color: #fcd116; }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .whatsapp-header span {
+                display: none;
+            }
+            
+            .whatsapp-header {
+                padding: 8px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                ACT 4<span class="act4-badge">FASHION</span>
+                <span class="logo-subtitle">DRESS & ACCESSORIES</span>
+            </a>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#how-to-order">How to Order</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" id="admin-toggle">Admin</a></li>
+                </ul>
+            </nav>
+            
+            <a href="https://wa.me/237678748517" class="whatsapp-header" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>Order Now</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>ACT 4 FASHION</h1>
+            <div class="tagline">Dress & Accessories Shop</div>
+            <p>Yaoundé's premier boutique for elegant dresses, stunning accessories, and Cameroonian fashion excellence.</p>
+            <a href="https://wa.me/237678748517?text=Hi%20ACT%204!%20I%20saw%20your%20website%20and%20want%20to%20place%20an%20order" 
+               class="btn whatsapp-btn" 
+               target="_blank">
+               <i class="fab fa-whatsapp"></i> Order on WhatsApp
+            </a>
+            <br>
+            <button class="btn admin-btn" id="show-admin-panel">Admin: Manage Products</button>
+        </div>
+    </section>
+
+    <!-- How to Order Section -->
+    <section class="container" id="how-to-order">
+        <h2 class="section-title">How to Order from ACT 4</h2>
+        <div class="order-instructions">
+            <h3 style="color: var(--primary-color); margin-bottom: 15px;">🛍️ Simple 3-Step Order Process</h3>
+            <ol>
+                <li><strong>Browse</strong> our ACT 4 collection below</li>
+                <li><strong>Click</strong> "Order via WhatsApp" on any item</li>
+                <li><strong>Send</strong> the message and we'll confirm your order</li>
+            </ol>
+            <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 5px;">
+                <p style="margin-bottom: 10px;">💰 <strong>Payment Options at ACT 4:</strong></p>
+                <ul style="padding-left: 20px;">
+                    <li>Cash on delivery in Yaoundé</li>
+                    <li>Mobile Money (Orange Money, MTN Mobile Money)</li>
+                    <li>Bank Transfer (for prepaid orders)</li>
+                </ul>
+            </div>
+            <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 5px;">
+                <p style="margin-bottom: 10px;">🚚 <strong>ACT 4 Delivery Service:</strong></p>
+                <ul style="padding-left: 20px;">
+                    <li>Free delivery in Yaoundé city center</li>
+                    <li>Outside Yaoundé: Delivery charge applies</li>
+                    <li>Same-day delivery for orders before 3 PM</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel for Adding Products -->
+    <section class="container">
+        <div class="admin-panel" id="adminPanel">
+            <h3>📦 ACT 4 Product Management</h3>
+            <p>Add, edit or remove products from your ACT 4 website</p>
+            
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" required placeholder="e.g., African Print Dress">
+                </div>
+                
+                <div class="form-group">
+                    <label for="productPrice">Price</label>
+                    <input type="text" id="productPrice" placeholder="e.g., 15,000 FCFA or $25" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productCategory">Category</label>
+                    <select id="productCategory">
+                        <option value="Dresses">Dresses</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Jewelry">Jewelry</option>
+                        <option value="Handbags">Handbags</option>
+                        <option value="Shoes">Shoes</option>
+                        <option value="African Wear">African Wear</option>
+                        <option value="Men's Fashion">Men's Fashion</option>
+                        <option value="Children">Children</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productDescription">Description</label>
+                    <textarea id="productDescription" rows="3" required placeholder="Describe the product..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productImage">Image URL</label>
+                    <input type="text" id="productImage" placeholder="Paste image link from Unsplash or upload to imgur.com" required>
+                    <small>Get free images from <a href="https://unsplash.com" target="_blank">Unsplash.com</a> or upload to <a href="https://imgur.com" target="_blank">Imgur.com</a></small>
+                </div>
+                
+                <input type="hidden" id="productId" value="">
+                <button type="submit" class="btn" id="saveProductBtn">Add to ACT 4 Collection</button>
+                <button type="button" class="btn delete-btn" id="cancelEditBtn" style="display: none;">Cancel Edit</button>
+            </form>
+            
+            <div id="currentProducts" style="margin-top: 30px;">
+                <h4>Current ACT 4 Products</h4>
+                <div id="productsList"></div>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background: #fff; border-radius: 5px; border-left: 3px solid var(--accent-color);">
+                <h4>💡 How to Add Product Images:</h4>
+                <ol>
+                    <li>Go to <a href="https://unsplash.com" target="_blank">Unsplash.com</a></li>
+                    <li>Search for your product (e.g., "African dress", "jewelry")</li>
+                    <li>Right-click image → "Copy image address"</li>
+                    <li>Paste in "Image URL" field above</li>
+                    <li>For African fashion: Search "African print", "Ankara", "Dashiki"</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container" id="products">
+        <h2 class="section-title">ACT 4 Collection</h2>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <button class="btn" id="filterAll" style="margin: 5px;">All</button>
+            <button class="btn" id="filterDresses" style="margin: 5px; background: #f0f0f0; color: var(--text-dark);">Dresses</button>
+            <button class="btn" id="filterAccessories" style="margin: 5px; background: #f0f0f0; color: var(--text-dark);">Accessories</button>
+            <button class="btn" id="filterAfrican" style="margin: 5px; background: #f0f0f0; color: var(--text-dark);">African Wear</button>
+        </div>
+        <div class="products" id="productsContainer">
+            <!-- Products will be loaded here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container contact" id="contact">
+        <h2 class="section-title">Visit ACT 4 in Yaoundé</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>ACT 4 Shop Location</h3>
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p><strong>Address:</strong></p>
+                        <p>Yaoundé, Cameroon</p>
+                        <p><small>Exact location shared on WhatsApp upon order confirmation</small></p>
+                        <div class="cameroon-flag">
+                            <span class="green"></span>
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                            <span class="red"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fab fa-whatsapp" style="background-color: #25D366;"></i>
+                    <div>
+                        <p><strong>WhatsApp Order Line:</strong></p>
+                        <p>+237 678 748 517</p>
+                        <a href="https://wa.me/237678748517" target="_blank" style="color: #25D366; font-weight: 600;">Click to message ACT 4 directly</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <p><strong>Call ACT 4:</strong></p>
+                        <p>+237 678 748 517</p>
+                        <p><small>Available during business hours</small></p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <p><strong>ACT 4 Business Hours:</strong></p>
+                        <p>Monday - Saturday: 8:30 AM - 7:00 PM</p>
+                        <p>Sunday: 10:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>ACT 4 Services</h3>
+                <div class="contact-detail">
+                    <i class="fas fa-tshirt"></i>
+                    <div>
+                        <p><strong>Custom Tailoring</strong></p>
+                        <p>We offer custom dressmaking and alterations</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-gift"></i>
+                    <div>
+                        <p><strong>Gift Wrapping</strong></p>
+                        <p>Free gift wrapping for all purchases</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <p><strong>Style Consultation</strong></p>
+                        <p>Free style advice to help you choose the perfect outfit</p>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">Follow ACT 4</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/237678748517" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+                
+                <div style="margin-top: 30px; padding: 15px; background: rgba(212, 175, 55, 0.1); border-radius: 5px;">
+                    <p style="color: var(--accent-color); font-weight: 600;">✨ Why Choose ACT 4?</p>
+                    <p style="margin-top: 5px; font-size: 14px;">Quality fashion • Affordable prices • Excellent customer service • Cameroonian owned</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>ACT 4 FASHION</h3>
+                    <p>Yaoundé's premier boutique for elegant dresses and accessories. Bringing quality fashion to Cameroon since 2023.</p>
+                    <p>📍 Based in Yaoundé, Cameroon</p>
+                    <p>📞 +237 678 748 517</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">ACT 4 Collection</a></li>
+                        <li><a href="#how-to-order">How to Order</a></li>
+                        <li><a href="#contact">Visit Our Shop</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>ACT 4 Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Custom Tailoring</a></li>
+                        <li><a href="#contact">Style Consultation</a></li>
+                        <li><a href="#contact">Delivery Service</a></li>
+                        <li><a href="#contact">Gift Wrapping</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Business Hours</h3>
+                    <p>Mon-Sat: 8:30 AM - 7:00 PM</p>
+                    <p>Sunday: 10:00 AM - 4:00 PM</p>
+                    <p>Public Holidays: Closed</p>
+                    <p style="margin-top: 15px; color: var(--accent-color);">🇨🇲 Proudly Cameroonian</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> ACT 4 Fashion - Yaoundé, Cameroon. All rights reserved.</p>
+                <p>Website designed with ❤️ for ACT 4 customers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // PRODUCT MANAGEMENT SYSTEM FOR ACT 4
+        // ============================================
+        
+        // Default products for ACT 4
+        let products = [
+            {
+                id: 1,
+                name: "African Print Dress",
+                price: "25,000 FCFA",
+                description: "Beautiful Ankara fabric dress with traditional African patterns. Perfect for weddings and special occasions.",
+                image: "https://images.unsplash.com/photo-1585487000160-6eb9ce6b5a5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                category: "African Wear"
+            },
+            {
+                id: 2,
+                name: "Gold Statement Necklace",
+                price: "12,500 FCFA",
+                description: "Elegant gold-plated necklace that adds glamour to any outfit. Made with quality materials.",
+                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                category: "Jewelry"
+            },
+            {
+                id: 3,
+                name: "Designer Leather Handbag",
+                price: "35,000 FCFA",
+                description: "Luxurious leather handbag with multiple compartments. Perfect for work or evening out.",
+                image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w-1000&q=80",
+                category: "Handbags"
+            },
+            {
+                id: 4,
+                name: "Evening Gown",
+                price: "45,000 FCFA",
+                description: "Stunning floor-length gown for special events. Available in various colors and sizes.",
+                image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                category: "Dresses"
+            },
+            {
+                id: 5,
+                name: "African Beaded Bracelet Set",
+                price: "8,000 FCFA",
+                description: "Set of 3 beaded bracelets with traditional African designs. Handcrafted by local artisans.",
+                image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                category: "Accessories"
+            },
+            {
+                id: 6,
+                name: "Men's Dashiki Shirt",
+                price: "18,000 FCFA",
+                description: "Traditional African men's shirt with vibrant patterns. Perfect for cultural events.",
+                image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                category: "African Wear"
+            }
+        ];
+
+        // Current filter
+        let currentFilter = "All";
+
+        // Load products from localStorage if available
+        function loadProducts() {
+            const savedProducts = localStorage.getItem('act4Products');
+            if (savedProducts) {
+                products = JSON.parse(savedProducts);
+            }
+        }
+
+        // Save products to localStorage
+        function saveProducts() {
+            localStorage.setItem('act4Products', JSON.stringify(products));
+        }
+
+        // Display filtered products
+        function displayProducts(filter = "All") {
+            const container = document.getElementById('productsContainer');
+            container.innerHTML = '';
+            
+            const filteredProducts = filter === "All" 
+                ? products 
+                : products.filter(p => p.category === filter);
+            
+            if (filteredProducts.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                        <h3>No products in this category yet</h3>
+                        <p>Add products using the Admin panel above</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'">
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <h3>${product.name}</h3>
+                            <span style="background: #f0f0f0; padding: 3px 8px; border-radius: 10px; font-size: 12px;">${product.category}</span>
+                        </div>
+                        <p class="price">${product.price}</p>
+                        <p>${product.description}</p>
+                        <a href="https://wa.me/237678748517?text=Hello%20ACT%204!%20I%20want%20to%20order:%20${encodeURIComponent(product.name)}%20for%20${encodeURIComponent(product.price)}%20(Category:%20${encodeURIComponent(product.category)})" 
+                           class="btn whatsapp-btn" 
+                           target="_blank"
+                           style="margin-top: 15px; display: inline-block;">
+                           <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                        </a>
+                    </div>
+                `;
+                container.appendChild(productCard);
+            });
+            
+            // Update active filter button
+            updateFilterButtons(filter);
+        }
+
+        // Display products in admin panel
+        function displayAdminProductsList() {
+            const container = document.getElementById('productsList');
+            container.innerHTML = '';
+            
+            if (products.length === 0) {
+                container.innerHTML = '<p>No products yet. Add your first product to ACT 4 collection!</p>';
+                return;
+            }
+            
+            products.forEach(product => {
+                const productItem = document.createElement('div');
+                productItem.className = 'product-item';
+                productItem.style.padding = '10px';
+                productItem.style.borderBottom = '1px solid #eee';
+                productItem.style.marginBottom = '10px';
+                productItem.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="flex: 1;">
+                            <strong>${product.name}</strong> 
+                            <span style="background: #f0f0f0; padding: 2px 8px; border-radius: 10px; font-size: 12px; margin-left: 10px;">${product.category}</span>
+                            <div style="color: var(--primary-color); font-weight: 600; margin: 5px 0;">${product.price}</div>
+                            <p style="margin: 5px 0; font-size: 14px; color: #666;">${product.description.substring(0, 60)}...</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn edit-btn" onclick="editProduct(${product.id})">Edit</button>
+                            <button class="btn delete-btn" onclick="deleteProduct(${product.id})">Delete</button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(productItem);
+            });
+        }
+
+        // Update filter button styles
+        function updateFilterButtons(activeFilter) {
+            const buttons = ['All', 'Dresses', 'Accessories', 'African'];
+            buttons.forEach(filter => {
+                const btn = document.getElementById(`filter${filter}`);
+                if (btn) {
+                    if (filter === activeFilter || (filter === 'African' && activeFilter === 'African Wear')) {
+                        btn.style.background = 'var(--primary-color)';
+                        btn.style.color = 'white';
+                    } else {
+                        btn.style.background = '#f0f0f0';
+                        btn.style.color = 'var(--text-dark)';
+                    }
+                }
+            });
+        }
+
+        // Add or update product
+        document.getElementById('productForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const id = document.getElementById('productId').value;
+            const name = document.getElementById('productName').value;
+            const price = document.getElementById('productPrice').value;
+            const category = document.getElementById('productCategory').value;
+            const description = document.getElementById('productDescription').value;
+            const image = document.getElementById('productImage').value;
+            
+            if (id) {
+                // Edit existing product
+                const index = products.findIndex(p => p.id == id);
+                products[index] = { id: parseInt(id), name, price, category, description, image };
+                document.getElementById('saveProductBtn').textContent = 'Add to ACT 4 Collection';
+                document.getElementById('cancelEditBtn').style.display = 'none';
+                document.getElementById('productId').value = '';
+            } else {
+                // Add new product
+                const newId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
+                products.push({ id: newId, name, price, category, description, image });
+            }
+            
+            saveProducts();
+            displayProducts(currentFilter);
+            this.reset();
+            document.getElementById('productCategory').value = 'Dresses';
+            
+            // Show success message
+            alert(id ? 'ACT 4 product updated successfully!' : 'Product added to ACT 4 collection!');
+        });
+
+        // Edit product
+        window.editProduct = function(id) {
+            const product = products.find(p => p.id == id);
+            if (!product) return;
+            
+            document.getElementById('productId').value = product.id;
+            document.getElementById('productName').value = product.name;
+            document.getElementById('productPrice').value = product.price;
+            document.getElementById('productCategory').value = product.category;
+            document.getElementById('productDescription').value = product.description;
+            document.getElementById('productImage').value = product.image;
+            
+            document.getElementById('saveProductBtn').textContent = 'Update Product';
+            document.getElementById('cancelEditBtn').style.display = 'inline-block';
+            
+            // Scroll to form
+            document.getElementById('adminPanel').scrollIntoView({ behavior: 'smooth' });
+        };
+
+        // Delete product
+        window.deleteProduct = function(id) {
+            if (confirm('Are you sure you want to delete this ACT 4 product?')) {
+                products = products.filter(p => p.id != id);
+                saveProducts();
+                displayProducts(currentFilter);
+                displayAdminProductsList();
+                alert('ACT 4 product deleted successfully!');
+            }
+        };
+
+        // Cancel edit
+        document.getElementById('cancelEditBtn').addEventListener('click', function() {
+            document.getElementById('productForm').reset();
+            document.getElementById('productId').value = '';
+            document.getElementById('saveProductBtn').textContent = 'Add to ACT 4 Collection';
+            document.getElementById('productCategory').value = 'Dresses';
+            this.style.display = 'none';
+        });
+
+        // ============================================
+        // FILTER BUTTONS
+        // ============================================
+        document.getElementById('filterAll').addEventListener('click', () => {
+            currentFilter = "All";
+            displayProducts("All");
+        });
+        
+        document.getElementById('filterDresses').addEventListener('click', () => {
+            currentFilter = "Dresses";
+            displayProducts("Dresses");
+        });
+        
+        document.getElementById('filterAccessories').addEventListener('click', () => {
+            currentFilter = "Accessories";
+            displayProducts("Accessories");
+        });
+        
+        document.getElementById('filterAfrican').addEventListener('click', () => {
+            currentFilter = "African Wear";
+            displayProducts("African Wear");
+        });
+
+        // ============================================
+        // ADMIN PANEL TOGGLE
+        // ============================================
+        document.getElementById('show-admin-panel').addEventListener('click', function() {
+            const adminPanel = document.getElementById('adminPanel');
+            adminPanel.classList.toggle('active');
+            this.textContent = adminPanel.classList.contains('active') 
+                ? 'Hide Admin Panel' 
+                : 'Admin: Manage Products';
+            
+            if (adminPanel.classList.contains('active')) {
+                adminPanel.scrollIntoView({ behavior: 'smooth' });
+                displayAdminProductsList();
+            }
+        });
+
+        document.getElementById('admin-toggle').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('show-admin-panel').click();
+        });
+
+        // ============================================
+        // MOBILE MENU TOGGLE
+        // ============================================
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = nav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // ============================================
+        // INITIALIZE ON PAGE LOAD
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProducts();
+            displayProducts();
+            displayAdminProductsList();
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Initialize filter buttons
+            updateFilterButtons("All");
+        });
+
+        // ============================================
+        // IMAGE ERROR HANDLING
+        // ============================================
+        document.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG' && e.target.className === 'product-img') {
+                e.target.src = 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+            }
+        }, true);
+
+        console.log("🛍️ ACT 4 Fashion Website Ready!");
+        console.log("📍 Location: Yaoundé, Cameroon");
+        console.log("📞 WhatsApp: +237 678 748 517");
+        console.log("💡 Admin Panel: Click 'Admin: Manage Products' to add/remove products");
+    </script>
+</body>
+</html>
