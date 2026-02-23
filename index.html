@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACT 4 | Dress & Accessories Shop - Yaoundé, Cameroon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #8B0000;
+            --secondary-color: #1a1a1a;
+            --accent-color: #D4AF37;
+            --text-dark: #333333;
+            --text-light: #f8f8f8;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fefefe;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: var(--secondary-color);
+            display: block;
+            margin-top: -5px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            left: 0;
+            bottom: -5px;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .whatsapp-header {
+            font-size: 24px;
+            color: #25D366;
+            text-decoration: none;
+            background: #f0f9f0;
+            padding: 8px 12px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .whatsapp-header i {
+            font-size: 20px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+        
+        /* Notification Bell */
+        .notification-bell {
+            position: relative;
+            margin-right: 15px;
+            cursor: pointer;
+            color: var(--secondary-color);
+            font-size: 20px;
+        }
+        
+        .notification-bell:hover {
+            color: var(--primary-color);
+        }
+        
+        .notification-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            display: none;
+        }
+        
+        .notification-badge.show {
+            display: flex;
+        }
+        
+        /* Notification Permission Banner */
+        .notification-banner {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            display: none;
+        }
+        
+        .notification-banner.show {
+            display: block;
+        }
+        
+        .notification-banner-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .notification-banner button {
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .notification-banner button:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        .notification-banner .close-banner {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        /* Notification Settings Panel */
+        .notification-settings {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent-color);
+            display: none;
+        }
+        
+        .notification-settings.show {
+            display: block;
+        }
+        
+        .notification-settings h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .notification-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .notification-option input {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .notification-option label {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+        
+        .notification-option p {
+            font-size: 14px;
+            color: #666;
+            margin-left: 30px;
+        }
+        
+        .save-notification-settings {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .save-notification-settings:hover {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+        }
+        
+        /* Notification Panel (History) */
+        .notification-panel {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 350px;
+            height: 100vh;
+            background: white;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            z-index: 10000;
+            transition: right 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .notification-panel.open {
+            right: 0;
+        }
+        
+        .notification-panel h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .notification-list {
+            list-style: none;
+        }
+        
+        .notification-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .notification-item:hover {
+            background: #f9f9f9;
+        }
+        
+        .notification-item.unread {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        .notification-time {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        
+        .close-panel {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+        
+        .close-panel:hover {
+            color: var(--primary-color);
+        }
+        
+        .clear-notifications {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+        }
+        
+        .clear-notifications:hover {
+            background: var(--primary-color);
+        }
+        
+        /* Secret Admin Link */
+        .secret-admin-link {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            z-index: 9999;
+            cursor: pointer;
+            opacity: 0.1;
+            transition: opacity 0.3s;
+        }
+        
+        .secret-admin-link:hover {
+            opacity: 0.5;
+        }
+        
+        /* Admin Login Modal */
+        .admin-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .admin-modal.active {
+            display: flex;
+        }
+        
+        .admin-modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-top: 4px solid var(--accent-color);
+        }
+        
+        .admin-modal-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .admin-modal-content p {
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .admin-modal-content input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #eee;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .admin-modal-content input:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+        
+        .admin-modal-content button {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .admin-modal-content button:hover {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            color: var(--primary-color);
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        /* Admin Panel */
+        .admin-panel {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border: 2px dashed var(--primary-color);
+        }
+        
+        .admin-panel.active {
+            display: block;
+        }
+        
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .admin-header h3 {
+            color: var(--primary-color);
+            margin: 0;
+        }
+        
+        .admin-logout {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .admin-logout:hover {
+            background: var(--primary-color);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        /* Image upload styles */
+        .image-upload-area {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .gallery-upload-btn {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        
+        .gallery-upload-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .hidden-file-input {
+            display: none;
+        }
+        
+        .image-preview {
+            max-width: 150px;
+            max-height: 150px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 2px solid var(--accent-color);
+            display: none;
+        }
+        
+        .image-preview.show {
+            display: block;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .product-actions button {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        
+        .delete-btn {
+            background-color: #e74c3c;
+        }
+        
+        .edit-btn {
+            background-color: #3498db;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(139, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero .tagline {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            color: var(--secondary-color);
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            color: white;
+        }
+        
+        /* Sections */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Products Grid */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .product-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            background-color: white;
+            border: 1px solid #eee;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(139, 0, 0, 0.1);
+        }
+        
+        .product-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+        
+        .price {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        /* How to Order Section */
+        .order-instructions {
+            background-color: #f9f7f4;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .order-instructions ol {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        .order-instructions li {
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .whatsapp-header span {
+                display: none;
+            }
+            
+            .whatsapp-header {
+                padding: 8px;
+            }
+            
+            .notification-panel {
+                width: 100%;
+                right: -100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Notification Banner (asks permission) -->
+    <div class="notification-banner" id="notificationBanner">
+        <div class="notification-banner-content">
+            <span>🔔 Get notified when ACT 4 adds new products!</span>
+            <button id="enableNotificationsBtn">Enable Notifications</button>
+        </div>
+        <button class="close-banner" id="closeBanner">&times;</button>
+    </div>
+
+    <!-- Notification Bell -->
+    <div style="position: fixed; top: 100px; right: 20px; z-index: 999;">
+        <div class="notification-bell" id="notificationBell">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge" id="notificationBadge">0</span>
+        </div>
+    </div>
+
+    <!-- Notification Panel (history) -->
+    <div class="notification-panel" id="notificationPanel">
+        <button class="close-panel" id="closePanel">&times;</button>
+        <h3>ACT 4 Notifications</h3>
+        
+        <!-- Notification Settings (collapsible) -->
+        <div class="notification-settings" id="notificationSettings">
+            <h3>🔔 Notification Preferences</h3>
+            <div class="notification-option">
+                <input type="checkbox" id="notifyNewProducts" checked>
+                <label for="notifyNewProducts">New Products</label>
+                <p>Get notified when new items are added to the collection</p>
+            </div>
+            <div class="notification-option">
+                <input type="checkbox" id="notifySales" checked>
+                <label for="notifySales">Sales & Promotions</label>
+                <p>Get notified about discounts and special offers</p>
+            </div>
+            <div class="notification-option">
+                <input type="checkbox" id="notifyRestocks">
+                <label for="notifyRestocks">Restocks</label>
+                <p>Get notified when sold-out items are back in stock</p>
+            </div>
+            <button class="save-notification-settings" id="saveNotificationSettings">Save Preferences</button>
+        </div>
+        
+        <ul class="notification-list" id="notificationList">
+            <!-- Notifications will appear here -->
+        </ul>
+        <button class="clear-notifications" id="clearNotifications">Clear All</button>
+    </div>
+
+    <!-- Secret Admin Access Point -->
+    <div class="secret-admin-link" id="secretAdminLink" title="Admin Access"></div>
+
+    <!-- Admin Login Modal -->
+    <div class="admin-modal" id="adminModal">
+        <div class="admin-modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>ACT 4 Admin Access</h2>
+            <p>Enter password to manage products</p>
+            <input type="password" id="adminPassword" placeholder="Enter password" autocomplete="off">
+            <button id="loginBtn">Login</button>
+            <div class="error-message" id="loginError">Incorrect password. Please try again.</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                ACT 4<span class="logo-subtitle">DRESS & ACCESSORIES</span>
+            </a>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#how-to-order">How to Order</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="https://wa.me/237680126284" class="whatsapp-header" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>Order Now</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>ACT 4 FASHION</h1>
+            <div class="tagline">Dress & Accessories Shop</div>
+            <p>Yaoundé's premier boutique for elegant dresses, stunning accessories, and Cameroonian fashion excellence.</p>
+            <a href="https://wa.me/237680126284?text=Hi%20ACT%204!%20I%20saw%20your%20website%20and%20want%20to%20place%20an%20order" 
+               class="btn whatsapp-btn" 
+               target="_blank">
+               <i class="fab fa-whatsapp"></i> Order on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- How to Order Section -->
+    <section class="container" id="how-to-order">
+        <h2 class="section-title">How to Order from ACT 4</h2>
+        <div class="order-instructions">
+            <h3 style="color: var(--primary-color); margin-bottom: 15px;">🛍️ Simple 3-Step Order Process</h3>
+            <ol>
+                <li><strong>Browse</strong> our ACT 4 collection below</li>
+                <li><strong>Click</strong> "Order via WhatsApp" on any item</li>
+                <li><strong>Send</strong> the message and we'll confirm your order</li>
+            </ol>
+            <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 5px;">
+                <p style="margin-bottom: 10px;">💰 <strong>Payment Options:</strong></p>
+                <ul style="padding-left: 20px;">
+                    <li>Cash on delivery in Yaoundé</li>
+                    <li>Mobile Money (Orange Money, MTN Mobile Money)</li>
+                    <li>Bank Transfer</li>
+                </ul>
+            </div>
+            <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 5px;">
+                <p style="margin-bottom: 10px;">🚚 <strong>Delivery Service:</strong></p>
+                <ul style="padding-left: 20px;">
+                    <li>Free delivery in Yaoundé city center</li>
+                    <li>Outside Yaoundé: Delivery charge applies</li>
+                    <li>Same-day delivery for orders before 3 PM</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel -->
+    <section class="container">
+        <div class="admin-panel" id="adminPanel">
+            <div class="admin-header">
+                <h3>📦 ACT 4 Product Management</h3>
+                <button class="admin-logout" id="logoutBtn">Logout</button>
+            </div>
+            <p>Add, edit or remove products from your ACT 4 website</p>
+            
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" required placeholder="e.g., African Print Dress">
+                </div>
+                
+                <div class="form-group">
+                    <label for="productPrice">Price</label>
+                    <input type="text" id="productPrice" placeholder="e.g., 15,000 FCFA or $25" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productCategory">Category</label>
+                    <select id="productCategory">
+                        <option value="Dresses">Dresses</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Jewelry">Jewelry</option>
+                        <option value="Handbags">Handbags</option>
+                        <option value="Shoes">Shoes</option>
+                        <option value="African Wear">African Wear</option>
+                        <option value="Men's Fashion">Men's Fashion</option>
+                        <option value="Children">Children</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productDescription">Description</label>
+                    <textarea id="productDescription" rows="3" required placeholder="Describe the product..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Product Image</label>
+                    <div class="image-upload-area">
+                        <input type="text" id="productImage" placeholder="Or paste image URL from Unsplash" style="flex: 1;">
+                        <button type="button" class="gallery-upload-btn" id="galleryUploadBtn">
+                            <i class="fas fa-images"></i> Upload from Gallery
+                        </button>
+                    </div>
+                    <input type="file" id="hiddenFileInput" class="hidden-file-input" accept="image/*">
+                    <img id="imagePreview" class="image-preview" alt="Preview">
+                </div>
+                
+                <!-- Notification Checkbox for Admin -->
+                <div class="form-group" style="background: #f0f0f0; padding: 15px; border-radius: 5px;">
+                    <label style="display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="notifyCustomers" checked>
+                        <span>🔔 Notify customers about this product</span>
+                    </label>
+                    <p style="font-size: 14px; color: #666; margin-top: 5px; margin-left: 25px;">When checked, all customers who enabled notifications will be alerted immediately</p>
+                </div>
+                
+                <input type="hidden" id="productId" value="">
+                <button type="submit" class="btn" id="saveProductBtn">Add to ACT 4 Collection</button>
+                <button type="button" class="btn delete-btn" id="cancelEditBtn" style="display: none;">Cancel Edit</button>
+            </form>
+            
+            <div id="currentProducts" style="margin-top: 30px;">
+                <h4>Current ACT 4 Products</h4>
+                <div id="productsList"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container" id="products">
+        <h2 class="section-title">ACT 4 Collection</h2>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <button class="btn" id="filterAll" style="margin: 5px;">All</button>
+            <button class="btn" id="filterDresses" style="margin: 5px; background: #f0f0f0; color: var(--text-dark);">Dresses</button>
+            <button class="btn" id="filterAccessories" style="margin: 5px; background: #f0f0f0; color: var(--text-dark);">Accessories</button>
+            <button class="btn" id="filterAfrican" style="margin: 5px; background: #f0f0f0; color: var(--text-dark);">African Wear</button>
+        </div>
+        <div class="products" id="productsContainer">
+            <!-- Products will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container contact" id="contact">
+        <h2 class="section-title">Visit ACT 4 in Yaoundé</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>ACT 4 Shop Location</h3>
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p><strong>Address:</strong></p>
+                        <p>Yaoundé, Cameroon</p>
+                        <p><small>Exact location shared on WhatsApp upon order confirmation</small></p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fab fa-whatsapp" style="background-color: #25D366;"></i>
+                    <div>
+                        <p><strong>WhatsApp Order Line:</strong></p>
+                        <p>+237 680 126 284</p>
+                        <a href="https://wa.me/237680126284" target="_blank" style="color: #25D366; font-weight: 600;">Click to message ACT 4 directly</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <p><strong>Call ACT 4:</strong></p>
+                        <p>+237 680 126 284</p>
+                        <p><small>Available during business hours</small></p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <p><strong>ACT 4 Business Hours:</strong></p>
+                        <p>Monday - Saturday: 8:30 AM - 7:00 PM</p>
+                        <p>Sunday: 10:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>ACT 4 Services</h3>
+                <div class="contact-detail">
+                    <i class="fas fa-tshirt"></i>
+                    <div>
+                        <p><strong>Custom Tailoring</strong></p>
+                        <p>We offer custom dressmaking and alterations</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-gift"></i>
+                    <div>
+                        <p><strong>Gift Wrapping</strong></p>
+                        <p>Free gift wrapping for all purchases</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <p><strong>Style Consultation</strong></p>
+                        <p>Free style advice to help you choose the perfect outfit</p>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">Follow ACT 4</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/237680126284" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+                
+                <div style="margin-top: 30px; padding: 15px; background: rgba(212, 175, 55, 0.1); border-radius: 5px;">
+                    <p style="color: var(--accent-color); font-weight: 600;">✨ Why Choose ACT 4?</p>
+                    <p style="margin-top: 5px; font-size: 14px;">Quality fashion • Affordable prices • Excellent customer service • Cameroonian owned</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>ACT 4 FASHION</h3>
+                    <p>Yaoundé's premier boutique for elegant dresses and accessories. Bringing quality fashion to Cameroon since 2023.</p>
+                    <p>📍 Based in Yaoundé, Cameroon</p>
+                    <p>📞 +237 680 126 284</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">ACT 4 Collection</a></li>
+                        <li><a href="#how-to-order">How to Order</a></li>
+                        <li><a href="#contact">Visit Our Shop</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>ACT 4 Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Custom Tailoring</a></li>
+                        <li><a href="#contact">Style Consultation</a></li>
+                        <li><a href="#contact">Delivery Service</a></li>
+                        <li><a href="#contact">Gift Wrapping</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Business Hours</h3>
+                    <p>Mon-Sat: 8:30 AM - 7:00 PM</p>
+                    <p>Sunday: 10:00 AM - 4:00 PM</p>
+                    <p>Public Holidays: Closed</p>
+                    <p style="margin-top: 15px; color: var(--accent-color);">🇨🇲 Proudly Cameroonian</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> ACT 4 Fashion - Yaoundé, Cameroon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // ACT 4 ADMIN PASSWORD (CHANGE THIS!)
+        // ============================================
+        const ADMIN_PASSWORD = "act4123";  // Change to your secret password
+        
+        // ============================================
+        // NOTIFICATION SYSTEM
+        // ============================================
+        
+        let notifications = [];
+        let notificationPermission = false;
+        let subscribers = [];
+        
+        // Load notifications from localStorage
+        function loadNotifications() {
+            const saved = localStorage.getItem('act4Notifications');
+            if (saved) {
+                notifications = JSON.parse(saved);
+            }
+            
+            const savedSubscribers = localStorage.getItem('act4Subscribers');
+            if (savedSubscribers) {
+                subscribers = JSON.parse(savedSubscribers);
+            }
+        }
+        
+        // Save notifications
+        function saveNotifications() {
+            localStorage.setItem('act4Notifications', JSON.stringify(notifications));
+        }
+        
+        // Save subscribers
+        function saveSubscribers() {
+            localStorage.setItem('act4Subscribers', JSON.stringify(subscribers));
+        }
+        
+        // Add notification
+        function addNotification(title, message, type = 'new_product', productId = null) {
+            const notification = {
+                id: Date.now(),
+                title,
+                message,
+                type,
+                productId,
+                time: new Date().toLocaleString(),
+                read: false
+            };
+            
+            notifications.unshift(notification);
+            
+            // Keep only last 50 notifications
+            if (notifications.length > 50) {
+                notifications = notifications.slice(0, 50);
+            }
+            
+            saveNotifications();
+            updateNotificationBadge();
+            displayNotifications();
+            
+            return notification;
+        }
+        
+        // Send push notification to all subscribers
+        function sendPushNotification(title, message, productId = null) {
+            if (!notificationPermission) return;
+            
+            // Add to notification history
+            addNotification(title, message, 'new_product', productId);
+            
+            // Send browser notification
+            if (Notification.permission === 'granted') {
+                const notification = new Notification('✨ ACT 4 Fashion', {
+                    body: message,
+                    icon: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=100&q=80',
+                    badge: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=100&q=80',
+                    tag: 'act4-notification',
+                    renotify: true
+                });
+                
+                notification.onclick = function() {
+                    window.focus();
+                    if (productId) {
+                        // Scroll to product or open notification panel
+                        document.getElementById('notificationBell').click();
+                    }
+                };
+            }
+        }
+        
+        // Update notification badge
+        function updateNotificationBadge() {
+            const badge = document.getElementById('notificationBadge');
+            const unreadCount = notifications.filter(n => !n.read).length;
+            
+            if (unreadCount > 0) {
+                badge.textContent = unreadCount;
+                badge.classList.add('show');
+            } else {
+                badge.classList.remove('show');
+            }
+        }
+        
+        // Display notifications in panel
+        function displayNotifications() {
+            const list = document.getElementById('notificationList');
+            list.innerHTML = '';
+            
+            if (notifications.length === 0) {
+                list.innerHTML = '<li style="text-align: center; padding: 20px; color: #999;">No notifications yet</li>';
+                return;
+            }
+            
+            notifications.forEach(notification => {
+                const li = document.createElement('li');
+                li.className = `notification-item ${!notification.read ? 'unread' : ''}`;
+                li.onclick = () => markAsRead(notification.id);
+                
+                let icon = '🔔';
+                if (notification.type === 'new_product') icon = '🆕';
+                if (notification.type === 'sale') icon = '💰';
+                if (notification.type === 'restock') icon = '📦';
+                
+                li.innerHTML = `
+                    <div style="display: flex; gap: 10px;">
+                        <span style="font-size: 20px;">${icon}</span>
+                        <div>
+                            <strong>${notification.title}</strong>
+                            <p style="font-size: 14px; margin: 5px 0;">${notification.message}</p>
+                            <span class="notification-time">${notification.time}</span>
+                        </div>
+                    </div>
+                `;
+                list.appendChild(li);
+            });
+        }
+        
+        // Mark notification as read
+        function markAsRead(id) {
+            const notification = notifications.find(n => n.id === id);
+            if (notification) {
+                notification.read = true;
+                saveNotifications();
+                updateNotificationBadge();
+                displayNotifications();
+            }
+        }
+        
+        // Mark all as read
+        function markAllAsRead() {
+            notifications.forEach(n => n.read = true);
+            saveNotifications();
+            updateNotificationBadge();
+            displayNotifications();
+        }
+        
+        // Request notification permission
+        function requestNotificationPermission() {
+            if (!('Notification' in window)) {
+                alert('This browser does not support desktop notifications');
+                return;
+            }
+            
+            if (Notification.permission === 'granted') {
+                notificationPermission = true;
+                document.getElementById('notificationBanner').classList.remove('show');
+                return;
+            }
+            
+            if (Notification.permission !== 'denied') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        notificationPermission = true;
+                        document.getElementById('notificationBanner').classList.remove('show');
+                        
+                        // Add welcome notification
+                        sendPushNotification(
+                            'Welcome to ACT 4!',
+                            'You\'ll now receive notifications about new products and offers.'
+                        );
+                    }
+                });
+            }
+        }
+        
+        // ============================================
+        // PRODUCT MANAGEMENT SYSTEM
+        // ============================================
+        
+        let products = [
+            {
+                id: 1,
+                name: "African Print Dress",
+                price: "25,000 FCFA",
+                description: "Beautiful Ankara fabric dress with traditional African patterns. Perfect for weddings and special occasions.",
+                image: "https://images.unsplash.com/photo-1585487000160-6eb9ce6b5a5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                category: "African Wear"
+            },
+            {
+                id: 2,
+                name: "Gold Statement Necklace",
+                price: "12,500 FCFA",
+                description: "Elegant gold-plated necklace that adds glamour to any outfit. Made with quality materials.",
+                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                category: "Jewelry"
+            },
+            {
+                id: 3,
+                name: "Designer Leather Handbag",
+                price: "35,000 FCFA",
+                description: "Luxurious leather handbag with multiple compartments. Perfect for work or evening out.",
+                image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                category: "Handbags"
+            },
+            {
+                id: 4,
+                name: "Evening Gown",
+                price: "45,000 FCFA",
+                description: "Stunning floor-length gown for special events. Available in various colors and sizes.",
+                image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                category: "Dresses"
+            }
+        ];
+
+        let currentFilter = "All";
+        let isAdminLoggedIn = false;
+
+        // Load products from localStorage
+        function loadProducts() {
+            const savedProducts = localStorage.getItem('act4Products');
+            if (savedProducts) {
+                products = JSON.parse(savedProducts);
+            }
+        }
+
+        // Save products to localStorage
+        function saveProducts() {
+            localStorage.setItem('act4Products', JSON.stringify(products));
+        }
+
+        // Display products
+        function displayProducts(filter = "All") {
+            const container = document.getElementById('productsContainer');
+            if (!container) return;
+            
+            container.innerHTML = '';
+            
+            const filteredProducts = filter === "All" 
+                ? products 
+                : products.filter(p => p.category === filter);
+            
+            if (filteredProducts.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                        <h3>No products in this category yet</h3>
+                        <p>Check back soon for new arrivals!</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'">
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <h3>${product.name}</h3>
+                            <span style="background: #f0f0f0; padding: 3px 8px; border-radius: 10px; font-size: 12px;">${product.category}</span>
+                        </div>
+                        <p class="price">${product.price}</p>
+                        <p>${product.description}</p>
+                        <a href="https://wa.me/237680126284?text=Hello%20ACT%204!%20I%20want%20to%20order:%20${encodeURIComponent(product.name)}%20for%20${encodeURIComponent(product.price)}%20(Category:%20${encodeURIComponent(product.category)})" 
+                           class="btn whatsapp-btn" 
+                           target="_blank"
+                           style="margin-top: 15px; display: inline-block;">
+                           <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                        </a>
+                    </div>
+                `;
+                container.appendChild(productCard);
+            });
+            
+            updateFilterButtons(filter);
+        }
+
+        // Update filter buttons
+        function updateFilterButtons(activeFilter) {
+            const buttons = ['All', 'Dresses', 'Accessories', 'African'];
+            buttons.forEach(filter => {
+                const btn = document.getElementById(`filter${filter}`);
+                if (btn) {
+                    if (filter === activeFilter || (filter === 'African' && activeFilter === 'African Wear')) {
+                        btn.style.background = 'var(--primary-color)';
+                        btn.style.color = 'white';
+                    } else {
+                        btn.style.background = '#f0f0f0';
+                        btn.style.color = 'var(--text-dark)';
+                    }
+                }
+            });
+        }
+
+        // Display admin products list
+        function displayAdminProductsList() {
+            const container = document.getElementById('productsList');
+            if (!container) return;
+            
+            container.innerHTML = '';
+            
+            if (products.length === 0) {
+                container.innerHTML = '<p>No products yet. Add your first product to ACT 4 collection!</p>';
+                return;
+            }
+            
+            products.forEach(product => {
+                const productItem = document.createElement('div');
+                productItem.className = 'product-item';
+                productItem.style.padding = '10px';
+                productItem.style.borderBottom = '1px solid #eee';
+                productItem.style.marginBottom = '10px';
+                productItem.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="flex: 1;">
+                            <strong>${product.name}</strong> 
+                            <span style="background: #f0f0f0; padding: 2px 8px; border-radius: 10px; font-size: 12px; margin-left: 10px;">${product.category}</span>
+                            <div style="color: var(--primary-color); font-weight: 600; margin: 5px 0;">${product.price}</div>
+                            <p style="margin: 5px 0; font-size: 14px; color: #666;">${product.description.substring(0, 60)}...</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn edit-btn" onclick="editProduct(${product.id})">Edit</button>
+                            <button class="btn delete-btn" onclick="deleteProduct(${product.id})">Delete</button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(productItem);
+            });
+        }
+
+        // Gallery Upload
+        const galleryUploadBtn = document.getElementById('galleryUploadBtn');
+        const hiddenFileInput = document.getElementById('hiddenFileInput');
+        const productImageInput = document.getElementById('productImage');
+        const imagePreview = document.getElementById('imagePreview');
+
+        galleryUploadBtn.addEventListener('click', function() {
+            hiddenFileInput.click();
+        });
+
+        hiddenFileInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                if (file.size > 2 * 1024 * 1024) {
+                    alert('Image too large! Please choose an image under 2MB.');
+                    return;
+                }
+
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    productImageInput.value = e.target.result;
+                    imagePreview.src = e.target.result;
+                    imagePreview.classList.add('show');
+                };
+                
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Add or update product (with notification)
+        document.getElementById('productForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const id = document.getElementById('productId').value;
+            const name = document.getElementById('productName').value;
+            const price = document.getElementById('productPrice').value;
+            const category = document.getElementById('productCategory').value;
+            const description = document.getElementById('productDescription').value;
+            const image = document.getElementById('productImage').value;
+            const notifyCustomers = document.getElementById('notifyCustomers').checked;
+            
+            if (!image) {
+                alert('Please add an image (upload from gallery or paste URL)');
+                return;
+            }
+            
+            let isNewProduct = false;
+            
+            if (id) {
+                // Edit existing product
+                const index = products.findIndex(p => p.id == id);
+                products[index] = { id: parseInt(id), name, price, category, description, image };
+                document.getElementById('saveProductBtn').textContent = 'Add to ACT 4 Collection';
+                document.getElementById('cancelEditBtn').style.display = 'none';
+                document.getElementById('productId').value = '';
+                alert('ACT 4 product updated successfully!');
+            } else {
+                // Add new product
+                isNewProduct = true;
+                const newId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
+                products.push({ id: newId, name, price, category, description, image });
+                alert('Product added to ACT 4 collection!');
+            }
+            
+            saveProducts();
+            displayProducts(currentFilter);
+            displayAdminProductsList();
+            
+            // Send notification for new products if checkbox checked
+            if (isNewProduct && notifyCustomers) {
+                sendPushNotification(
+                    '🆕 New at ACT 4!',
+                    `${name} - ${price} (${category})`,
+                    id || products[products.length - 1].id
+                );
+            }
+            
+            // Reset form
+            this.reset();
+            document.getElementById('productCategory').value = 'Dresses';
+            document.getElementById('notifyCustomers').checked = true;
+            imagePreview.classList.remove('show');
+            imagePreview.src = '';
+        });
+
+        // Edit product
+        window.editProduct = function(id) {
+            if (!isAdminLoggedIn) return;
+            
+            const product = products.find(p => p.id == id);
+            if (!product) return;
+            
+            document.getElementById('productId').value = product.id;
+            document.getElementById('productName').value = product.name;
+            document.getElementById('productPrice').value = product.price;
+            document.getElementById('productCategory').value = product.category;
+            document.getElementById('productDescription').value = product.description;
+            document.getElementById('productImage').value = product.image;
+            
+            if (product.image.startsWith('data:image')) {
+                imagePreview.src = product.image;
+                imagePreview.classList.add('show');
+            }
+            
+            document.getElementById('saveProductBtn').textContent = 'Update Product';
+            document.getElementById('cancelEditBtn').style.display = 'inline-block';
+            
+            document.getElementById('adminPanel').scrollIntoView({ behavior: 'smooth' });
+        };
+
+        // Delete product
+        window.deleteProduct = function(id) {
+            if (!isAdminLoggedIn) return;
+            
+            if (confirm('Are you sure you want to delete this ACT 4 product?')) {
+                products = products.filter(p => p.id != id);
+                saveProducts();
+                displayProducts(currentFilter);
+                displayAdminProductsList();
+                alert('ACT 4 product deleted successfully!');
+            }
+        };
+
+        // Cancel edit
+        document.getElementById('cancelEditBtn').addEventListener('click', function() {
+            document.getElementById('productForm').reset();
+            document.getElementById('productId').value = '';
+            document.getElementById('saveProductBtn').textContent = 'Add to ACT 4 Collection';
+            document.getElementById('productCategory').value = 'Dresses';
+            document.getElementById('notifyCustomers').checked = true;
+            imagePreview.classList.remove('show');
+            imagePreview.src = '';
+            this.style.display = 'none';
+        });
+
+        // ============================================
+        // ADMIN LOGIN SYSTEM
+        // ============================================
+        
+        document.getElementById('secretAdminLink').addEventListener('click', function() {
+            document.getElementById('adminModal').classList.add('active');
+            document.getElementById('adminPassword').focus();
+        });
+
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('adminModal').classList.remove('active');
+            document.getElementById('adminPassword').value = '';
+            document.getElementById('loginError').classList.remove('show');
+        });
+
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('adminModal');
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('loginError').classList.remove('show');
+            }
+        });
+
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            const password = document.getElementById('adminPassword').value;
+            
+            if (password === ADMIN_PASSWORD) {
+                isAdminLoggedIn = true;
+                document.getElementById('adminModal').classList.remove('active');
+                document.getElementById('adminPanel').classList.add('active');
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('loginError').classList.remove('show');
+                displayAdminProductsList();
+            } else {
+                document.getElementById('loginError').classList.add('show');
+                document.getElementById('adminPassword').value = '';
+            }
+        });
+
+        document.getElementById('adminPassword').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('loginBtn').click();
+            }
+        });
+
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            isAdminLoggedIn = false;
+            document.getElementById('adminPanel').classList.remove('active');
+            document.getElementById('productForm').reset();
+            document.getElementById('productId').value = '';
+            document.getElementById('saveProductBtn').textContent = 'Add to ACT 4 Collection';
+            document.getElementById('cancelEditBtn').style.display = 'none';
+            document.getElementById('notifyCustomers').checked = true;
+            imagePreview.classList.remove('show');
+            imagePreview.src = '';
+        });
+
+        // ============================================
+        // NOTIFICATION UI HANDLERS
+        // ============================================
+        
+        // Show notification banner if permission not granted
+        if (Notification.permission !== 'granted' && Notification.permission !== 'denied') {
+            document.getElementById('notificationBanner').classList.add('show');
+        }
+        
+        // Enable notifications button
+        document.getElementById('enableNotificationsBtn').addEventListener('click', function() {
+            requestNotificationPermission();
+        });
+        
+        // Close banner
+        document.getElementById('closeBanner').addEventListener('click', function() {
+            document.getElementById('notificationBanner').classList.remove('show');
+        });
+        
+        // Notification bell click
+        document.getElementById('notificationBell').addEventListener('click', function() {
+            document.getElementById('notificationPanel').classList.toggle('open');
+            markAllAsRead();
+        });
+        
+        // Close panel
+        document.getElementById('closePanel').addEventListener('click', function() {
+            document.getElementById('notificationPanel').classList.remove('open');
+        });
+        
+        // Clear all notifications
+        document.getElementById('clearNotifications').addEventListener('click', function() {
+            if (confirm('Clear all notifications?')) {
+                notifications = [];
+                saveNotifications();
+                updateNotificationBadge();
+                displayNotifications();
+            }
+        });
+        
+        // Save notification preferences
+        document.getElementById('saveNotificationSettings').addEventListener('click', function() {
+            const prefs = {
+                newProducts: document.getElementById('notifyNewProducts').checked,
+                sales: document.getElementById('notifySales').checked,
+                restocks: document.getElementById('notifyRestocks').checked
+            };
+            localStorage.setItem('act4NotificationPrefs', JSON.stringify(prefs));
+            alert('Notification preferences saved!');
+        });
+        
+        // Load notification preferences
+        function loadNotificationPrefs() {
+            const prefs = localStorage.getItem('act4NotificationPrefs');
+            if (prefs) {
+                const p = JSON.parse(prefs);
+                document.getElementById('notifyNewProducts').checked = p.newProducts;
+                document.getElementById('notifySales').checked = p.sales;
+                document.getElementById('notifyRestocks').checked = p.restocks;
+            }
+        }
+
+        // ============================================
+        // FILTER BUTTONS
+        // ============================================
+        document.getElementById('filterAll').addEventListener('click', () => {
+            currentFilter = "All";
+            displayProducts("All");
+        });
+        
+        document.getElementById('filterDresses').addEventListener('click', () => {
+            currentFilter = "Dresses";
+            displayProducts("Dresses");
+        });
+        
+        document.getElementById('filterAccessories').addEventListener('click', () => {
+            currentFilter = "Accessories";
+            displayProducts("Accessories");
+        });
+        
+        document.getElementById('filterAfrican').addEventListener('click', () => {
+            currentFilter = "African Wear";
+            displayProducts("African Wear");
+        });
+
+        // ============================================
+        // MOBILE MENU TOGGLE
+        // ============================================
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = nav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // ============================================
+        // INITIALIZE
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProducts();
+            loadNotifications();
+            loadNotificationPrefs();
+            displayProducts();
+            displayNotifications();
+            updateNotificationBadge();
+            
+            // Set current year
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+
+        // Handle image errors
+        document.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG' && e.target.className === 'product-img') {
+                e.target.src = 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+            }
+        }, true);
+    </script>
+</body>
+</html>
